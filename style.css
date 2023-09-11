@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
     --menu_font:'Roboto Condensed', sans-serif;
     --menu-title-font:'Special Elite', cursive;
     --title-font:'Abril Fatface', cursive;
+    --right-menu-font:'Poppins', sans-serif;
+
 }
 *{
     box-sizing: border-box;
@@ -27,7 +30,7 @@ body,html{
 .navigation-menu{
     width: 100%;
     height: 10%;
-    position: sticky;
+    position: relative;
     /* padding: 5%; */
 }
 a{
@@ -69,6 +72,9 @@ a:hover{
     font-family: var(--menu_font);
     font-size: 2.5vw;
    
+}
+.navigation-menu .mobile-menu :hover{
+    cursor: pointer;
 }
 .navigation-menu .mobile-menu{
     display: none;
@@ -113,6 +119,41 @@ a:hover{
     }
 
 }
+/*mobile version-right-menu-starts*/
+
+.mobile-right-menu{
+    position: absolute;
+    width: 35vw;
+    height: 100vh;
+    border-radius: 5px;
+    background-color: white;
+    text-align: right;
+    top: 0px;
+    right: 0px;
+    z-index: 100;
+    display: none;
+    
+
+}
+.mobile-right-menu .ri-close-fill{
+    padding: 10px;
+    font-size: 30px;
+}
+.mobile-right-menu .right-menu{
+    list-style-type: none;
+    margin: 3.3vw;
+    
+
+}
+.mobile-right-menu .right-menu li{
+    padding: 4vw;
+    font-size: 3.6vw;
+    font-family: var(--right-menu-font);
+}
+
+
+/*mobile version-right-menu-end*/
+
 /* navigation styles-end */
 /* article section start */
 .title-quote{
@@ -120,6 +161,7 @@ a:hover{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     /* padding: 20px; */
     font-size: 3.5vw;
     color: #77811E;
@@ -127,6 +169,7 @@ a:hover{
     width: 100%;
    height: 75%;
    margin-top: 7%;
+   /* z-index: 90; */
    /* background-image: url(./images/title_background_image.jpg);
    background-repeat: no-repeat;
    background-size: cover;
@@ -266,8 +309,6 @@ a:hover{
         }
 
 }
-
-
 
 /* article section end */
 /* first-container end */
